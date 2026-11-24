@@ -1,6 +1,6 @@
 // Creekside app wrapper - keeps the icon/splash/"No signal" page on the phone. The app itself always comes live
 // from Google (never cached here). Bump VERSION when you change any wrapper file.
-var VERSION = 'creekside-v1';
+var VERSION = 'creekside-v2';
 var SHELL = ['./', 'index.html', 'offline.html', 'manifest.json', 'icons/icon-192.png', 'icons/apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
