@@ -2,7 +2,7 @@
 // from Google (never cached here). Bump VERSION when you change any wrapper file.
 // v3 (24/11/2026, SPEED): this wrapper page opens straight from the phone (cache first) instead of waiting for
 // GitHub on every launch; a fresh copy is fetched in the background for next time.
-var VERSION = 'creekside-v4';   // v4 24/11/2026: animated splash
+var VERSION = 'creekside-v5';   // v5 24/11/2026: offline drafts send when back in service
 var SHELL = ['./', 'index.html', 'offline.html', 'manifest.json', 'icons/icon-192.png', 'icons/apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
